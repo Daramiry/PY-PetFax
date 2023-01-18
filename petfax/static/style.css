@@ -1,0 +1,58 @@
+
+/* VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+:root { 
+    --light-accent: #aff2a4; 
+    --main-accent: #1bb2d7;
+    --second-accent: #e08207;
+ }
+
+/* GENERAL */
+body {
+    background: var(--light-accent)
+}
+.container {
+    width: 50%;
+    margin: 2em auto;
+    padding: 1em 3em 3em 3em;
+    border-radius: 1em;
+    background: #6c7b6a;
+}
+h1 {
+    margin: 0;
+    color: var(--main-accent);
+    font-family: 'Roboto', impact;
+    font-size: 4em;
+    text-align: center;
+}
+h2 {
+    color: var(--second-accent);
+}
+a {
+    font-family: 'Roboto';;
+    color: var(--main-accent);
+}
+.callout {
+    background: #eee;
+    color: var(--second-accent);
+    padding: 0.5em;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+/* PETS */ 
+.pets-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+.pets-container img {
+    width: 100%;
+    display: block;
+    margin-bottom: 5%;
+}
+.pet {
+    width: 40%;
+    margin: 5%;
+}
