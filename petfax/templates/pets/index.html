@@ -1,26 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetFax | Pets</title>
+    <title>PetFax</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+</head> 
 <body>
     <div class="container">
-        <H1>PetFax</H1>
+        <h1>PetFax</h1>
+        <div class="callout">
+            We love all kind of animals and we want to make sure they are taken care of.
+        </div>
         <div class="pets-container">
             {% for pet in pets %}
                 <div class="pet">
-                    <H2>{{ pet.pet_name }}</H2>
-                    <img src="{{ url_for('static', filename='/assets') }}{{pet.pet_photo}}"/>
-                    <a href="/pet/{{ pet.pet_id }}">Learn more ⟩</a>
+                    <h2>{{ pet.pet_name }}</h2>
+                    <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+                    <a href="/pets/{{ pet.pet_id }}">More Facts</a>
                 </div>
             {% endfor %}
         </div>
         <div class="callout">
-            Give us some new facts! <a href="/facts/new">Submit some facts here.</a>
+            I'd wish I knew more about the animals. <a href="/facts/new">Tell me more.</a>
         </div>
     </div>
 </body>
